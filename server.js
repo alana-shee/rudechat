@@ -16,6 +16,14 @@ io.on('connection', function(client){
 	client.on('join', function(data){
 		console.log(data);
 	});
+
+	client.on('messages', function(data){
+		client.emit('thread', data);
+
+		// broadcast message to all other clients
+		client.broadcast.emit('thread', data);
+	});
 });
+
 
 server.listen(7777);
