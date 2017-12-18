@@ -9,4 +9,13 @@ app.get('/', function(req, res, next){
 
 app.use(express.static('public'));
 
+// print information when client connects
+io.on('connection', function(client){
+	console.log('Client connected...');
+
+	client.on('join', function(data){
+		console.log(data);
+	});
+});
+
 server.listen(7777);
