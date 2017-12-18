@@ -1,1 +1,25 @@
+<html>
+	<head>
+		<title> Rude Chat </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="style.css"/>
+	</head>
 
+	<body>
+		<h1>Don't hold back!</h1>
+
+		<!-- message input -->
+		<form>
+			<input id="message" type="text" placeholder="Fucking message">
+			<input type="submit" value="Send">
+		</form>
+
+		<!-- sent messages go here -->
+		<ul id="thread"></ul>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="client.js"></script>
+
+	</body>
+</html>
